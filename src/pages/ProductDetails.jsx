@@ -15,6 +15,7 @@ const ProductDetails = () => {
     JSON.parse(sessionStorage.getItem("product"));
   const { image, title, price, description } = selectedItem;
   return (
+    
     <section className="min-h-screen grid place-content-center pt-32 pb-12 lg:py-32">
       {!selectedItem && <h1>Loading...</h1>}
       <div className="container gap-8 flex flex-col lg:flex-row justify-around items-center">
