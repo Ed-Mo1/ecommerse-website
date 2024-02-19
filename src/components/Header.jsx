@@ -18,7 +18,7 @@ const Header = () => {
       className={`fixed top-0 left-0 w-full z-10 transition-all ${isActive ? "bg-white py-4 shadow-md" : "py-6 bg-none"}`}
     >
       <div className="container flex justify-between items-center">
-        <Link to={"/ecommerce-website/"}>
+        <Link to={`/ecommerse-website/`}>
           <div>
             <img src={Logo} width={40} alt="log" />
           </div>
