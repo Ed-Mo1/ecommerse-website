@@ -58,14 +58,14 @@ const Sidebar = () => {
         </div>
 
         <Link
-          to="/"
+          to="/ecommerse-website/"
           className="block w-full bg-gray-500 text-center text-white py-2 rounded-full"
         >
           View cart
         </Link>
 
         <Link
-          to="/"
+          to="/ecommerse-website/"
           className="block w-full text-center py-2.5 border bg-primary text-white rounded-full"
         >
           Checkout
