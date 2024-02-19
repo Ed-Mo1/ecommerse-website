@@ -1,7 +1,15 @@
 import { useState, createContext, useEffect, useCallback } from "react";
+import { json } from "react-router-dom";
 export const CartContext = createContext();
 const CartProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(
+    JSON.parse(localStorage.getItem("cartItems")) || []
+  );
+
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
+
   const [total, setTotal] = useState(0);
   const [amount, setAmount] = useState(0);
   useEffect(() => {
@@ -76,7 +84,7 @@ const CartProvider = ({ children }) => {
         increaseAmount,
         clearCart,
         total,
-        amount
+        amount,
       }}
     >
       {children}

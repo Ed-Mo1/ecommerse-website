@@ -12,7 +12,8 @@ const Hero = () => {
             <div>new trend</div>
           </div>
           <h1 className="text-7xl leading-[1.1] uppercase font-light mb-4">
-            autumn sale styling <br /> <span className=" font-semibold">womens</span>
+            autumn sale styling <br />{" "}
+            <span className=" font-semibold">womens</span>
           </h1>
           <Link
             to="/ecommerce-website/"

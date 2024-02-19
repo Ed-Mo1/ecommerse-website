@@ -6,16 +6,15 @@ import { ProductsContext } from "../contexts/ProductContext";
 const ProductDetails = () => {
   const products = useContext(ProductsContext);
   useEffect(() => {
-    sessionStorage.setItem("product", JSON.stringify(selectedItem));
+    localStorage.setItem("product", JSON.stringify(selectedItem));
   }, []);
   const { addToCart } = useContext(CartContext);
   const { productId } = useParams();
   const selectedItem =
     products.find((item) => item.id == productId) ||
-    JSON.parse(sessionStorage.getItem("product"));
+    JSON.parse(localStorage.getItem("product"));
   const { image, title, price, description } = selectedItem;
   return (
-    
     <section className="min-h-screen grid place-content-center pt-32 pb-12 lg:py-32">
       {!selectedItem && <h1>Loading...</h1>}
       <div className="container gap-8 flex flex-col lg:flex-row justify-around items-center">
